@@ -38,15 +38,21 @@ Endpoint: POST http://localhost:3000/api/register
 Request Body:
 
 {
+
   "username": "your_username",
+  
   "password": "your_password"
+  
 }
 
 Response:
 
 {
+
   "id": 1,
+  
   "username": "your_username"
+  
 }
 
 ![Screenshot 2024-10-23 150533](https://github.com/user-attachments/assets/6fb81716-aeca-4986-938e-ae7d1ca36087)
@@ -54,20 +60,84 @@ Response:
 
 Log in a user and generate a token
 
-Endpoint: POST /api/login
+Endpoint: POST  http://localhost:3000/api/login
 
 Request Body:
 
 {
+
   "username": "your_username",
+  
   "password": "your_password"
+  
 }
 
 Response:
  
 {
+
   "token": "jwt_token"
+  
 }
 
 ![Screenshot 2024-10-23 152246](https://github.com/user-attachments/assets/315ff33f-c252-4c01-81cb-a020b69890d6)
+
+
+
+Create a transaction
+
+Endpoint: POST http://localhost:3000/api/transactions
+
+Headers:
+
+{
+
+  "Authorization": "Bearer your_jwt_token"
+  
+}
+
+Request Body:
+ 
+ {
+ 
+  "type": "income",
+  
+  "category": "Salary",
+  
+  "amount": 5000,
+  
+  "date": "2024-01-17",
+  
+  "description": "Jan salary"
+  
+}
+
+Response:
+ 
+{
+
+    "id": 7,
+    
+    "type": "income",
+    
+    "category": "Salary",
+    
+    "amount": 5000,
+    
+    "date": "2024-01-17T00:00:00.000Z",
+    
+    "description": "Jan salary",
+    
+    "userId": 1,
+    
+    "updatedAt": "2024-10-23T09:58:49.696Z",
+    
+    "createdAt": "2024-10-23T09:58:49.696Z"
+    
+}
+
+
+![Screenshot 2024-10-23 152916](https://github.com/user-attachments/assets/54acdca3-8768-482a-96e5-3faa9174e162)
+
+
 
