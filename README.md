@@ -140,4 +140,77 @@ Response:
 ![Screenshot 2024-10-23 152916](https://github.com/user-attachments/assets/54acdca3-8768-482a-96e5-3faa9174e162)
 
 
+Get all transactions (with pagination)
 
+Endpoint: GET http://localhost:3000/api/transactions
+
+Headers:
+
+{
+  "Authorization": "Bearer your_jwt_token"
+}
+
+Query Parameters:
+
+limit (optional): Number of transactions per page (default is 10)
+
+offset (optional): Offset for pagination (default is 0)
+
+Response:
+ 
+{
+
+    "transactions": [
+    
+        {
+        
+            "id": 1,
+            
+            "type": "income",
+            
+            "category": "Salary",
+            
+            "amount": 5000,
+            
+            "date": "2024-12-15T00:00:00.000Z",
+            
+            "description": "Dec salary",
+            
+            "userId": 1,
+            
+            "createdAt": "2024-10-22T18:54:52.852Z",
+            
+            "updatedAt": "2024-10-22T19:00:04.502Z"
+            
+        },
+        
+        {
+        
+            "id": 7,
+            
+            "type": "income",
+            
+            "category": "Salary",
+            
+            "amount": 5000,
+            
+            "date": "2024-01-17T00:00:00.000Z",
+            
+            "description": "Jan salary",
+            
+            "userId": 1,
+            
+            "createdAt": "2024-10-23T09:58:49.696Z",
+            
+            "updatedAt": "2024-10-23T09:58:49.696Z"
+        }
+    ],
+    
+    "totalCount": 4,
+    
+    "currentPage": 1,
+    
+    "totalPages": 1
+}
+
+![Screenshot 2024-10-23 154247](https://github.com/user-attachments/assets/570982a9-c43c-40d6-9ef0-9de82910e8a0)
