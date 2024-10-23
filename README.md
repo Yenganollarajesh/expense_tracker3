@@ -36,4 +36,4 @@ Response:
   "username": "your_username"
 }
 
-![Uploading Screenshot 2024-10-23 150533.png…]()
+![Screenshot 2024-10-23 150533](https://github.com/user-attachments/assets/6fb81716-aeca-4986-938e-ae7d1ca36087)
